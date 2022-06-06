@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<body>
+    <div class="container">
+        <h1>LOG IN</h1>
+        <i class="fa fa-user icon"></i>
+        <div class="input">
+            <input type="text" class="user" placeholder="Username">
+        </div>
+        <i class="fa fa-key icon"></i>
+        <div class="input">
+            <input type="password" class="user" id="password" placeholder="Password">
+        </div>
+        <i class="fa fa-eye eye"></i>
+        <a href="#">Forget Password?</a>
+        <button class="submit">Log in</button>
+    </div>
+    <script>
+        const root = document.documentElement
+        const eye = document.querySelector(".eye")
+        passwordInput = document.querySelectorAll(".user")[1]
+        eye.addEventListener("click",function (){
+            root.classList.toggle("active")
+            eye.classList.toggle("fa-eye-slash")
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password'
+            passwordInput.focus();
+        })
+    </script>
+</body>
+</html>
